@@ -21,10 +21,10 @@ Boas Práticas
 ```
 public function ajaxLalala()
 {
-⋅⋅⋅$this->request->onlyAllow(['ajax']);
+        $this->request->onlyAllow(['ajax']);  
 
-    $this->set('data', $data);
-    $this->set('_serialize', 'data');
+        $this->set('data', $data);
+        $this->set('_serialize', 'data');
 }
 ```
 * Sobre [$this->request->onlyAllow(string|array $methods)](http://api.cakephp.org/2.4/class-CakeRequest.html#_onlyAllow).
