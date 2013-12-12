@@ -18,7 +18,7 @@ Boas Práticas
 * Faça verificação de empty do request->data no controller.. você já faz isso antes de mandar pro modelo.. não precisa verificar de novo no modelo.
 * Prefixo ajax em métodos ajax.. ok?
     Ex:
-'''
+
     public function ajaxLalala()
     {
         $this->request->onlyAllow(['ajax']);
@@ -26,7 +26,7 @@ Boas Práticas
         $this->set('data', $data);
         $this->set('_serialize', 'data');
     }
-'''
+
 * Sobre [$this->request->onlyAllow(string|array $methods)](http://api.cakephp.org/2.4/class-CakeRequest.html#_onlyAllow).
 
 ## Sobre Models
