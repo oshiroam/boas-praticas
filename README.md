@@ -25,7 +25,6 @@ public function ajaxLalala()
 
         $this->set('data', $data);
         $this->set('_serialize', 'data');
-        $this->set('_serialize', 'data');
 }
 ```
 * Sobre [$this->request->onlyAllow(string|array $methods)](http://api.cakephp.org/2.4/class-CakeRequest.html#_onlyAllow).
