@@ -14,35 +14,35 @@ Boas Práticas
 * Use else com cuidado, no geral, não precisa!
 
 ## Sobre Controllers
-    * Controller não salva, nãp carrega muitos dados não faz muita coisa.
-    * Faça verificação de empty do request->data no controller.. você já faz isso antes de mandar pro modelo.. não precisa verificar de novo no modelo.
-    * Prefixo ajax em métodos ajax.. ok?
-        Ex:
-            public function ajaxLalala()
-            {
-                $this->request->onlyAllow(['ajax']);
+* Controller não salva, nãp carrega muitos dados não faz muita coisa.
+* Faça verificação de empty do request->data no controller.. você já faz isso antes de mandar pro modelo.. não precisa verificar de novo no modelo.
+* Prefixo ajax em métodos ajax.. ok?
+    Ex:
+        public function ajaxLalala()
+        {
+            $this->request->onlyAllow(['ajax']);
 
-                ...
+            ...
 
-                $this->set('data', $data);
-                $this->set('_serialize', 'data');
-            }
-    * Sobre [$this->request->onlyAllow(string|array $methods)](http://api.cakephp.org/2.4/class-CakeRequest.html#_onlyAllow).
+            $this->set('data', $data);
+            $this->set('_serialize', 'data');
+        }
+* Sobre [$this->request->onlyAllow(string|array $methods)](http://api.cakephp.org/2.4/class-CakeRequest.html#_onlyAllow).
 
 ## Sobre Models
-    * Modelo faz a merda toda, ele se fode pra resolver QUASE tudo.
-    * Disparar evento no modelo, não salva dados que deveriam ser de outro modelo.
+* Modelo faz a merda toda, ele se fode pra resolver QUASE tudo.
+* Disparar evento no modelo, não salva dados que deveriam ser de outro modelo.
         Ex: Model A (só salva coisas do model A) -> evento -> Model B (só salva coisas do model B)
-    * Se você precisa salvar model, evento e depois o model de novo, você precisa rever a associação.
-    * Se seu campo data não precisa ser muito especifico, use type date, senão é datetime e cuide disso.
-    * Vou usar só type number pra float, azar..
-    * Mantenha o fixture e o model sempre atualizados.
+* Se você precisa salvar model, evento e depois o model de novo, você precisa rever a associação.
+* Se seu campo data não precisa ser muito especifico, use type date, senão é datetime e cuide disso.
+* Vou usar só type number pra float, azar..
+* Mantenha o fixture e o model sempre atualizados.
 
 ## Sobre Views
-    - View, só mostra msm, no muito faz umas contas de somar..
+* View, só mostra msm, no muito faz umas contas de somar..
 
 ## Sobre Formatação de códigos
-    * Nome de método protected começa com 2 __
-    * Nome de método private começa com 1 _
-    * Código de debug grudado na margem e com separação de duas linhas acima e abaixo, ajuda pra caralho no find all..
-    * Usa espaço e não tab.
+* Nome de método protected começa com 2 __
+* Nome de método private começa com 1 _
+* Código de debug grudado na margem e com separação de duas linhas acima e abaixo, ajuda pra caralho no find all..
+* Usa espaço e não tab.
