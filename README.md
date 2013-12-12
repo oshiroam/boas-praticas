@@ -1,7 +1,6 @@
-best-practices
+Boas Práticas
 ==============
 
-Compilation of best practices and standards for coding in using at Radig
 
 -> Geral
     - Vai fazer um CRUD? cria tudo de uma vez.. não fica enrolando pra criar os testes..
