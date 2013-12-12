@@ -28,6 +28,7 @@ public function ajaxLalala()
 }
 ```
 * Sobre [$this->request->onlyAllow(string|array $methods)](http://api.cakephp.org/2.4/class-CakeRequest.html#_onlyAllow).
+* Usar $this->request->onlyAllow() somente para métodos que não tem view.
 
 ## Sobre Models
 * Modelo faz a merda toda, ele se fode pra resolver QUASE tudo.
@@ -42,7 +43,6 @@ public function ajaxLalala()
 * View, só mostra msm, no muito faz umas contas de somar..
 
 ## Sobre Formatação de códigos
-* Nome de método protected começa com 2 __
-* Nome de método private começa com 1 _
+* Nome de método protected começa com 1 _
 * Código de debug grudado na margem e com separação de duas linhas acima e abaixo, ajuda pra caralho no find all..
 * Usa espaço e não tab.
