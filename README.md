@@ -21,9 +21,10 @@ Boas Práticas
 ```
 public function ajaxLalala()
 {
-        $this->request->onlyAllow(['ajax']);  
+        $this->request->onlyAllow(['ajax']);
 
         $this->set('data', $data);
+        $this->set('_serialize', 'data');
         $this->set('_serialize', 'data');
 }
 ```
