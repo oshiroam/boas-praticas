@@ -9,7 +9,7 @@ Boas Práticas
 * Comentário de método é grudado na margem, de classe tbem.. Dá uma olhada no padrão do cakphp.
 * Se você achou que seu código ta uma ruim de entender, coloca um comentário nele..
 * Ainda não sei se é uma boa fazer isso $this->__setFormData(); Se só o *add()* e o *edit()* vão usar os dados, acho que é uma boa usar ele.
-		+ Para coisas bem especificas, algo que o *beforeRender()* não precise fazer.
+	*  Para coisas bem especificas, algo que o *beforeRender()* não precise fazer.
 * No Form->input, se *options* então *empty*.
 * Use else com cuidado, no geral, não precisa!
 * Padronize o nome/tipo dos campos por TODO o projeto.. Quando vpcê ler uma variável vai saber o que é não importa onde esteja.
@@ -24,7 +24,7 @@ Boas Práticas
 public function ajaxLalala()
 {
 		$this->request->onlyAllow(['ajax']);
-		...
+		
 		$this->set('data', $data);
 		$this->set('_serialize', 'data');
 }
@@ -35,7 +35,7 @@ public function ajaxLalala()
 ## Sobre Models
 * Modelo faz a mágica toda, ele resolver QUASE tudo pra você.
 * Disparar evento no modelo, não salva dados que deveriam ser de outro modelo.
-        Ex: Model A (só salva coisas do model A) -> evento -> Model B (só salva coisas do model B)
+	* Ex: Model A (só salva coisas do model A) -> evento -> Model B (só salva coisas do model B)
 * Se você precisa salvar model, evento e depois o model de novo, você precisa rever a associação.
 * Se seu campo data não precisa ser muito especifico, use *type date*, senão é *datetime* e cuide disso.
 * Vou usar só *type number* pra *float*, azar..
@@ -46,7 +46,7 @@ public function ajaxLalala()
 
 ## Sobre Formatação de códigos
 * Nome de método protected começa com 1 _
-        Ex: potected function _methodProtected(){}
+	* Ex: potected function _methodProtected(){}
 * Código de debug grudado na margem e com separação de pelomenos uma linha acima e abaixo, ajuda pra muito no find all..
-		+ Serve também pra pr(), console.log(), die(), die; e outros.
+	*  Serve também pra pr(), console.log(), die(), die; e outros.
 * Usa espaço e não tab, consifgure isso no seu editor.
