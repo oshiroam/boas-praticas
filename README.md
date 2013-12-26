@@ -24,7 +24,7 @@ Boas Práticas
 public function ajaxLalala()
 {
 		$this->request->onlyAllow(['ajax']);
-		
+
 		$this->set('data', $data);
 		$this->set('_serialize', 'data');
 }
@@ -49,4 +49,4 @@ public function ajaxLalala()
 	* Ex: potected function _methodProtected(){}
 * Código de debug grudado na margem e com separação de pelomenos uma linha acima e abaixo, ajuda pra muito no find all..
 	*  Serve também pra pr(), console.log(), die(), die; e outros.
-* Usa espaço e não tab, consifgure isso no seu editor.
+* Usa espaço e não tab, configure isso no seu editor.
